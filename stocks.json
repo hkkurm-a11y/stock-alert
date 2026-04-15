@@ -1,0 +1,1195 @@
+{
+  "korean": [
+    {
+      "name": "삼성전자",
+      "ticker": null,
+      "buy_price": 80395.88,
+      "quantity": 242,
+      "active": true
+    },
+    {
+      "name": "CJ제일제당",
+      "ticker": null,
+      "buy_price": 237968.09,
+      "quantity": 97,
+      "active": true
+    },
+    {
+      "name": "농심",
+      "ticker": null,
+      "buy_price": 420166.39,
+      "quantity": 50,
+      "active": true
+    },
+    {
+      "name": "삼성전자우",
+      "ticker": null,
+      "buy_price": 66259.97,
+      "quantity": 150,
+      "active": true
+    },
+    {
+      "name": "서흥",
+      "ticker": null,
+      "buy_price": 22197.65,
+      "quantity": 875,
+      "active": true
+    },
+    {
+      "name": "DL우",
+      "ticker": null,
+      "buy_price": 37659.25,
+      "quantity": 599,
+      "active": true
+    },
+    {
+      "name": "코스맥스",
+      "ticker": null,
+      "buy_price": 182011.72,
+      "quantity": 77,
+      "active": true
+    },
+    {
+      "name": "대한항공",
+      "ticker": null,
+      "buy_price": 25249.68,
+      "quantity": 609,
+      "active": true
+    },
+    {
+      "name": "롯데웰푸드",
+      "ticker": null,
+      "buy_price": 121838.05,
+      "quantity": 111,
+      "active": true
+    },
+    {
+      "name": "오리온",
+      "ticker": null,
+      "buy_price": 104122.91,
+      "quantity": 93,
+      "active": true
+    },
+    {
+      "name": "현대홈쇼핑",
+      "ticker": null,
+      "buy_price": 57382.1,
+      "quantity": 138,
+      "active": true
+    },
+    {
+      "name": "GS리테일",
+      "ticker": null,
+      "buy_price": 23538.28,
+      "quantity": 479,
+      "active": true
+    },
+    {
+      "name": "골프존",
+      "ticker": null,
+      "buy_price": 64388.11,
+      "quantity": 176,
+      "active": true
+    },
+    {
+      "name": "LG생활건강우",
+      "ticker": null,
+      "buy_price": 126496.96,
+      "quantity": 74,
+      "active": true
+    },
+    {
+      "name": "티와이홀딩스",
+      "ticker": null,
+      "buy_price": 3972.55,
+      "quantity": 2729,
+      "active": true
+    },
+    {
+      "name": "사조대림",
+      "ticker": null,
+      "buy_price": 40126.16,
+      "quantity": 216,
+      "active": true
+    },
+    {
+      "name": "아세아제지",
+      "ticker": null,
+      "buy_price": 7805.91,
+      "quantity": 758,
+      "active": true
+    },
+    {
+      "name": "NAVER",
+      "ticker": null,
+      "buy_price": 235162.62,
+      "quantity": 29,
+      "active": true
+    },
+    {
+      "name": "KCC글라스",
+      "ticker": null,
+      "buy_price": 34471.29,
+      "quantity": 216,
+      "active": true
+    },
+    {
+      "name": "빙그레",
+      "ticker": null,
+      "buy_price": 75892.35,
+      "quantity": 75,
+      "active": true
+    },
+    {
+      "name": "종근당",
+      "ticker": null,
+      "buy_price": 82818.58,
+      "quantity": 57,
+      "active": true
+    },
+    {
+      "name": "SK하이닉스",
+      "ticker": null,
+      "buy_price": 896009.36,
+      "quantity": 5,
+      "active": true
+    },
+    {
+      "name": "메가젠임플란트",
+      "ticker": null,
+      "buy_price": 61771.43,
+      "quantity": 66,
+      "active": true
+    },
+    {
+      "name": "제이앤티씨",
+      "ticker": null,
+      "buy_price": 18481.57,
+      "quantity": 256,
+      "active": true
+    },
+    {
+      "name": "CJ제일제당 우",
+      "ticker": null,
+      "buy_price": 135663.0,
+      "quantity": 29,
+      "active": true
+    },
+    {
+      "name": "오뚜기",
+      "ticker": null,
+      "buy_price": 394407.41,
+      "quantity": 10,
+      "active": true
+    },
+    {
+      "name": "한국콜마",
+      "ticker": null,
+      "buy_price": 69554.07,
+      "quantity": 46,
+      "active": true
+    },
+    {
+      "name": "종근당홀딩스",
+      "ticker": null,
+      "buy_price": 49473.86,
+      "quantity": 72,
+      "active": true
+    },
+    {
+      "name": "CJ우",
+      "ticker": null,
+      "buy_price": 89890.42,
+      "quantity": 37,
+      "active": true
+    },
+    {
+      "name": "한국공항",
+      "ticker": null,
+      "buy_price": 60526.8,
+      "quantity": 50,
+      "active": true
+    },
+    {
+      "name": "대한화섬",
+      "ticker": null,
+      "buy_price": 119107.67,
+      "quantity": 24,
+      "active": true
+    },
+    {
+      "name": "더네이쳐홀딩스",
+      "ticker": null,
+      "buy_price": 10862.07,
+      "quantity": 378,
+      "active": true
+    },
+    {
+      "name": "AJ네트웍스",
+      "ticker": null,
+      "buy_price": 4998.31,
+      "quantity": 517,
+      "active": true
+    },
+    {
+      "name": "제이브이엠",
+      "ticker": null,
+      "buy_price": 24927.16,
+      "quantity": 104,
+      "active": true
+    },
+    {
+      "name": "SPC삼립",
+      "ticker": null,
+      "buy_price": 53409.9,
+      "quantity": 48,
+      "active": true
+    },
+    {
+      "name": "CJ대한통운",
+      "ticker": null,
+      "buy_price": 95167.67,
+      "quantity": 22,
+      "active": true
+    },
+    {
+      "name": "바텍",
+      "ticker": null,
+      "buy_price": 23804.02,
+      "quantity": 102,
+      "active": true
+    },
+    {
+      "name": "미원상사",
+      "ticker": null,
+      "buy_price": 153618.75,
+      "quantity": 16,
+      "active": true
+    },
+    {
+      "name": "농심홀딩스",
+      "ticker": null,
+      "buy_price": 91387.49,
+      "quantity": 23,
+      "active": true
+    },
+    {
+      "name": "유한양행",
+      "ticker": null,
+      "buy_price": 104374.21,
+      "quantity": 21,
+      "active": true
+    },
+    {
+      "name": "아세아시멘트",
+      "ticker": null,
+      "buy_price": 11456.13,
+      "quantity": 185,
+      "active": true
+    },
+    {
+      "name": "삼성전기우",
+      "ticker": null,
+      "buy_price": 102979.69,
+      "quantity": 12,
+      "active": true
+    },
+    {
+      "name": "파마리서치",
+      "ticker": null,
+      "buy_price": 323359.65,
+      "quantity": 6,
+      "active": true
+    },
+    {
+      "name": "에스앤디",
+      "ticker": null,
+      "buy_price": 84356.25,
+      "quantity": 32,
+      "active": true
+    },
+    {
+      "name": "F&F",
+      "ticker": null,
+      "buy_price": 65809.26,
+      "quantity": 27,
+      "active": true
+    },
+    {
+      "name": "SBS",
+      "ticker": null,
+      "buy_price": 19209.36,
+      "quantity": 102,
+      "active": true
+    },
+    {
+      "name": "현대리바트",
+      "ticker": null,
+      "buy_price": 7538.56,
+      "quantity": 227,
+      "active": true
+    },
+    {
+      "name": "이마트",
+      "ticker": null,
+      "buy_price": 97918.57,
+      "quantity": 16,
+      "active": true
+    },
+    {
+      "name": "쿠쿠홈시스",
+      "ticker": null,
+      "buy_price": 24203.64,
+      "quantity": 66,
+      "active": true
+    },
+    {
+      "name": "SK",
+      "ticker": null,
+      "buy_price": 322469.71,
+      "quantity": 5,
+      "active": true
+    },
+    {
+      "name": "삼목에스폼",
+      "ticker": null,
+      "buy_price": 20017.45,
+      "quantity": 80,
+      "active": true
+    },
+    {
+      "name": "엘앤씨바이오",
+      "ticker": null,
+      "buy_price": 73045.31,
+      "quantity": 21,
+      "active": true
+    },
+    {
+      "name": "와이지엔터테인먼트",
+      "ticker": null,
+      "buy_price": 62563.61,
+      "quantity": 25,
+      "active": true
+    },
+    {
+      "name": "금강공업",
+      "ticker": null,
+      "buy_price": 5166.15,
+      "quantity": 279,
+      "active": true
+    },
+    {
+      "name": "유나이티드제약",
+      "ticker": null,
+      "buy_price": 21337.36,
+      "quantity": 64,
+      "active": true
+    },
+    {
+      "name": "현대백화점",
+      "ticker": null,
+      "buy_price": 86079.85,
+      "quantity": 16,
+      "active": true
+    },
+    {
+      "name": "엘오티베큠",
+      "ticker": null,
+      "buy_price": 12266.56,
+      "quantity": 102,
+      "active": true
+    },
+    {
+      "name": "레이",
+      "ticker": null,
+      "buy_price": 8878.65,
+      "quantity": 230,
+      "active": true
+    },
+    {
+      "name": "사조산업",
+      "ticker": null,
+      "buy_price": 56460.63,
+      "quantity": 22,
+      "active": true
+    },
+    {
+      "name": "카카오",
+      "ticker": null,
+      "buy_price": 51377.78,
+      "quantity": 23,
+      "active": true
+    },
+    {
+      "name": "에스티팜",
+      "ticker": null,
+      "buy_price": 98122.64,
+      "quantity": 7,
+      "active": true
+    },
+    {
+      "name": "금호석유화학우",
+      "ticker": null,
+      "buy_price": 59471.85,
+      "quantity": 18,
+      "active": true
+    },
+    {
+      "name": "신세계인터내셔날",
+      "ticker": null,
+      "buy_price": 13959.76,
+      "quantity": 82,
+      "active": true
+    },
+    {
+      "name": "세아홀딩스",
+      "ticker": null,
+      "buy_price": 151741.67,
+      "quantity": 6,
+      "active": true
+    },
+    {
+      "name": "대한약품",
+      "ticker": null,
+      "buy_price": 29049.01,
+      "quantity": 31,
+      "active": true
+    },
+    {
+      "name": "HK이노엔",
+      "ticker": null,
+      "buy_price": 50904.91,
+      "quantity": 17,
+      "active": true
+    },
+    {
+      "name": "SK가스",
+      "ticker": null,
+      "buy_price": 244653.69,
+      "quantity": 3,
+      "active": true
+    },
+    {
+      "name": "매일유업",
+      "ticker": null,
+      "buy_price": 38606.39,
+      "quantity": 23,
+      "active": true
+    },
+    {
+      "name": "크라운제과",
+      "ticker": null,
+      "buy_price": 8469.8,
+      "quantity": 94,
+      "active": true
+    },
+    {
+      "name": "LS",
+      "ticker": null,
+      "buy_price": 250226.41,
+      "quantity": 3,
+      "active": true
+    },
+    {
+      "name": "샘표식품",
+      "ticker": null,
+      "buy_price": 28595.17,
+      "quantity": 27,
+      "active": true
+    },
+    {
+      "name": "영원무역",
+      "ticker": null,
+      "buy_price": 81818.02,
+      "quantity": 9,
+      "active": true
+    },
+    {
+      "name": "진에어",
+      "ticker": null,
+      "buy_price": 9067.75,
+      "quantity": 105,
+      "active": true
+    },
+    {
+      "name": "SGC에너지",
+      "ticker": null,
+      "buy_price": 62809.09,
+      "quantity": 11,
+      "active": true
+    },
+    {
+      "name": "오스테오닉",
+      "ticker": null,
+      "buy_price": 6588.32,
+      "quantity": 101,
+      "active": true
+    },
+    {
+      "name": "셀비온",
+      "ticker": null,
+      "buy_price": 25296.64,
+      "quantity": 20,
+      "active": true
+    },
+    {
+      "name": "한선엔지니어링",
+      "ticker": null,
+      "buy_price": 12560.0,
+      "quantity": 45,
+      "active": true
+    },
+    {
+      "name": "한일시멘트",
+      "ticker": null,
+      "buy_price": 17195.68,
+      "quantity": 38,
+      "active": true
+    },
+    {
+      "name": "다우기술",
+      "ticker": null,
+      "buy_price": 24396.76,
+      "quantity": 14,
+      "active": true
+    },
+    {
+      "name": "카카오뱅크",
+      "ticker": null,
+      "buy_price": 24182.15,
+      "quantity": 25,
+      "active": true
+    },
+    {
+      "name": "아모레퍼시픽우",
+      "ticker": null,
+      "buy_price": 46314.74,
+      "quantity": 13,
+      "active": true
+    },
+    {
+      "name": "JW생명과학",
+      "ticker": null,
+      "buy_price": 12844.87,
+      "quantity": 47,
+      "active": true
+    },
+    {
+      "name": "샘표",
+      "ticker": null,
+      "buy_price": 51254.3,
+      "quantity": 11,
+      "active": true
+    },
+    {
+      "name": "인바디",
+      "ticker": null,
+      "buy_price": 29812.84,
+      "quantity": 21,
+      "active": true
+    },
+    {
+      "name": "노바렉스",
+      "ticker": null,
+      "buy_price": 13913.24,
+      "quantity": 41,
+      "active": true
+    },
+    {
+      "name": "네오팜",
+      "ticker": null,
+      "buy_price": 17880.1,
+      "quantity": 29,
+      "active": true
+    },
+    {
+      "name": "한국단자",
+      "ticker": null,
+      "buy_price": 67796.43,
+      "quantity": 6,
+      "active": true
+    },
+    {
+      "name": "하나금융지주",
+      "ticker": null,
+      "buy_price": 94467.0,
+      "quantity": 4,
+      "active": true
+    },
+    {
+      "name": "서진시스템",
+      "ticker": null,
+      "buy_price": 36957.11,
+      "quantity": 10,
+      "active": true
+    },
+    {
+      "name": "파라다이스",
+      "ticker": null,
+      "buy_price": 17024.14,
+      "quantity": 26,
+      "active": true
+    },
+    {
+      "name": "삼성SDI",
+      "ticker": null,
+      "buy_price": 262370.0,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "NI스틸",
+      "ticker": null,
+      "buy_price": 3943.15,
+      "quantity": 111,
+      "active": true
+    },
+    {
+      "name": "OCI홀딩스",
+      "ticker": null,
+      "buy_price": 164015.93,
+      "quantity": 2,
+      "active": true
+    },
+    {
+      "name": "CJ프레시웨이",
+      "ticker": null,
+      "buy_price": 31123.13,
+      "quantity": 12,
+      "active": true
+    },
+    {
+      "name": "오로스테크놀로지",
+      "ticker": null,
+      "buy_price": 29053.87,
+      "quantity": 12,
+      "active": true
+    },
+    {
+      "name": "정다운",
+      "ticker": null,
+      "buy_price": 2645.34,
+      "quantity": 135,
+      "active": true
+    },
+    {
+      "name": "동진쎄미켐",
+      "ticker": null,
+      "buy_price": 46807.44,
+      "quantity": 7,
+      "active": true
+    },
+    {
+      "name": "조광페인트",
+      "ticker": null,
+      "buy_price": 5681.44,
+      "quantity": 65,
+      "active": true
+    },
+    {
+      "name": "아모레퍼시픽홀딩스3우C",
+      "ticker": null,
+      "buy_price": 23312.57,
+      "quantity": 13,
+      "active": true
+    },
+    {
+      "name": "E1",
+      "ticker": null,
+      "buy_price": 98000.48,
+      "quantity": 3,
+      "active": true
+    },
+    {
+      "name": "엠에스씨",
+      "ticker": null,
+      "buy_price": 7925.63,
+      "quantity": 42,
+      "active": true
+    },
+    {
+      "name": "아이디스",
+      "ticker": null,
+      "buy_price": 17628.44,
+      "quantity": 15,
+      "active": true
+    },
+    {
+      "name": "씨티케이",
+      "ticker": null,
+      "buy_price": 4831.39,
+      "quantity": 64,
+      "active": true
+    },
+    {
+      "name": "우양",
+      "ticker": null,
+      "buy_price": 3264.66,
+      "quantity": 82,
+      "active": true
+    },
+    {
+      "name": "제일테크노스",
+      "ticker": null,
+      "buy_price": 6477.34,
+      "quantity": 40,
+      "active": true
+    },
+    {
+      "name": "코스텍시스",
+      "ticker": null,
+      "buy_price": 22100.0,
+      "quantity": 11,
+      "active": true
+    },
+    {
+      "name": "엔씨소프트",
+      "ticker": null,
+      "buy_price": 214995.86,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "영원무역홀딩스",
+      "ticker": null,
+      "buy_price": 181007.4,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "아이센스",
+      "ticker": null,
+      "buy_price": 19943.42,
+      "quantity": 11,
+      "active": true
+    },
+    {
+      "name": "카카오게임즈",
+      "ticker": null,
+      "buy_price": 20380.0,
+      "quantity": 17,
+      "active": true
+    },
+    {
+      "name": "DL이앤씨우",
+      "ticker": null,
+      "buy_price": 22584.44,
+      "quantity": 7,
+      "active": true
+    },
+    {
+      "name": "디케이락",
+      "ticker": null,
+      "buy_price": 9564.63,
+      "quantity": 21,
+      "active": true
+    },
+    {
+      "name": "NICE인프라",
+      "ticker": null,
+      "buy_price": 4820.8,
+      "quantity": 47,
+      "active": true
+    },
+    {
+      "name": "KT밀리의서재",
+      "ticker": null,
+      "buy_price": 13611.55,
+      "quantity": 13,
+      "active": true
+    },
+    {
+      "name": "삼양케이씨아이",
+      "ticker": null,
+      "buy_price": 6308.57,
+      "quantity": 27,
+      "active": true
+    },
+    {
+      "name": "HDC현대산업개발",
+      "ticker": null,
+      "buy_price": 21078.36,
+      "quantity": 8,
+      "active": true
+    },
+    {
+      "name": "해태제과식품",
+      "ticker": null,
+      "buy_price": 6676.71,
+      "quantity": 25,
+      "active": true
+    },
+    {
+      "name": "환인제약",
+      "ticker": null,
+      "buy_price": 11319.69,
+      "quantity": 15,
+      "active": true
+    },
+    {
+      "name": "국보디자인",
+      "ticker": null,
+      "buy_price": 22486.23,
+      "quantity": 7,
+      "active": true
+    },
+    {
+      "name": "실리콘투",
+      "ticker": null,
+      "buy_price": 38308.33,
+      "quantity": 4,
+      "active": true
+    },
+    {
+      "name": "한세실업",
+      "ticker": null,
+      "buy_price": 12224.47,
+      "quantity": 12,
+      "active": true
+    },
+    {
+      "name": "선진",
+      "ticker": null,
+      "buy_price": 10505.49,
+      "quantity": 13,
+      "active": true
+    },
+    {
+      "name": "태영건설",
+      "ticker": null,
+      "buy_price": 2171.91,
+      "quantity": 66,
+      "active": true
+    },
+    {
+      "name": "골프존홀딩스",
+      "ticker": null,
+      "buy_price": 4785.47,
+      "quantity": 24,
+      "active": true
+    },
+    {
+      "name": "대신증권우",
+      "ticker": null,
+      "buy_price": 23486.74,
+      "quantity": 5,
+      "active": true
+    },
+    {
+      "name": "롯데칠성",
+      "ticker": null,
+      "buy_price": 126225.69,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "코오롱티슈진",
+      "ticker": null,
+      "buy_price": 14154.74,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "삼보판지",
+      "ticker": null,
+      "buy_price": 9656.82,
+      "quantity": 11,
+      "active": true
+    },
+    {
+      "name": "한독",
+      "ticker": null,
+      "buy_price": 11587.78,
+      "quantity": 10,
+      "active": true
+    },
+    {
+      "name": "우리금융지주",
+      "ticker": null,
+      "buy_price": 26511.21,
+      "quantity": 3,
+      "active": true
+    },
+    {
+      "name": "OCI",
+      "ticker": null,
+      "buy_price": 69501.56,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "원익QnC",
+      "ticker": null,
+      "buy_price": 27626.16,
+      "quantity": 3,
+      "active": true
+    },
+    {
+      "name": "월덱스",
+      "ticker": null,
+      "buy_price": 27080.21,
+      "quantity": 3,
+      "active": true
+    },
+    {
+      "name": "한국자산신탁",
+      "ticker": null,
+      "buy_price": 2860.0,
+      "quantity": 33,
+      "active": true
+    },
+    {
+      "name": "SK텔레콤",
+      "ticker": null,
+      "buy_price": 53291.67,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "다우데이타",
+      "ticker": null,
+      "buy_price": 20236.79,
+      "quantity": 3,
+      "active": true
+    },
+    {
+      "name": "SNT모티브",
+      "ticker": null,
+      "buy_price": 31837.03,
+      "quantity": 2,
+      "active": true
+    },
+    {
+      "name": "현대이지웰",
+      "ticker": null,
+      "buy_price": 5592.66,
+      "quantity": 10,
+      "active": true
+    },
+    {
+      "name": "삼양통상",
+      "ticker": null,
+      "buy_price": 55857.86,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "씨에스윈드",
+      "ticker": null,
+      "buy_price": 46942.21,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "앱클론",
+      "ticker": null,
+      "buy_price": 10962.75,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "에스엘",
+      "ticker": null,
+      "buy_price": 32638.13,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "토모큐브",
+      "ticker": null,
+      "buy_price": 23620.0,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "심텍",
+      "ticker": null,
+      "buy_price": 22102.51,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "인투셀",
+      "ticker": null,
+      "buy_price": 28860.0,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "한국가구",
+      "ticker": null,
+      "buy_price": 4840.32,
+      "quantity": 8,
+      "active": true
+    },
+    {
+      "name": "제이에스링크",
+      "ticker": null,
+      "buy_price": 18626.67,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "삼양패키징",
+      "ticker": null,
+      "buy_price": 13506.25,
+      "quantity": 3,
+      "active": true
+    },
+    {
+      "name": "비츠로셀",
+      "ticker": null,
+      "buy_price": 15505.72,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "성광벤드",
+      "ticker": null,
+      "buy_price": 33493.14,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "태광",
+      "ticker": null,
+      "buy_price": 28083.82,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "블랙야크아이앤씨",
+      "ticker": null,
+      "buy_price": 3260.58,
+      "quantity": 11,
+      "active": true
+    },
+    {
+      "name": "케이씨",
+      "ticker": null,
+      "buy_price": 25875.75,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "한국수출포장",
+      "ticker": null,
+      "buy_price": 3083.07,
+      "quantity": 10,
+      "active": true
+    },
+    {
+      "name": "코오롱우",
+      "ticker": null,
+      "buy_price": 26135.02,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "대한전선",
+      "ticker": null,
+      "buy_price": 18884.1,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "코오롱인더우",
+      "ticker": null,
+      "buy_price": 26145.44,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "벽산",
+      "ticker": null,
+      "buy_price": 1877.19,
+      "quantity": 14,
+      "active": true
+    },
+    {
+      "name": "케이엠더블유",
+      "ticker": null,
+      "buy_price": 8772.06,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "매커스",
+      "ticker": null,
+      "buy_price": 13260.0,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "아스테라시스",
+      "ticker": null,
+      "buy_price": 10867.8,
+      "quantity": 2,
+      "active": true
+    },
+    {
+      "name": "KSS해운",
+      "ticker": null,
+      "buy_price": 9859.83,
+      "quantity": 2,
+      "active": true
+    },
+    {
+      "name": "코메론",
+      "ticker": null,
+      "buy_price": 12590.36,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "TKG휴켐스",
+      "ticker": null,
+      "buy_price": 18487.87,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "세진중공업",
+      "ticker": null,
+      "buy_price": 7406.8,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "위닉스",
+      "ticker": null,
+      "buy_price": 6343.33,
+      "quantity": 3,
+      "active": true
+    },
+    {
+      "name": "신대양제지",
+      "ticker": null,
+      "buy_price": 10443.72,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "와이지-원",
+      "ticker": null,
+      "buy_price": 5329.41,
+      "quantity": 1,
+      "active": true
+    },
+    {
+      "name": "화승인더",
+      "ticker": null,
+      "buy_price": 3731.67,
+      "quantity": 2,
+      "active": true
+    },
+    {
+      "name": "ESR켄달스퀘어리츠",
+      "ticker": null,
+      "buy_price": 4625.0,
+      "quantity": 1,
+      "active": true
+    }
+  ],
+  "us": []
+}
