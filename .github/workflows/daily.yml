@@ -1,0 +1,26 @@
+name: Daily Stock Alert
+
+on:
+  schedule:
+    - cron: "0 22 * * 1-5"   # 평일 오전 7시 KST (UTC 22시)
+  workflow_dispatch:           # 수동 실행 버튼
+
+jobs:
+  alert:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: 패키지 설치
+        run: pip install -r requirements.txt
+
+      - name: 주식 알림 실행
+        env:
+          DART_API_KEY:     ${{ secrets.DART_API_KEY }}
+          TELEGRAM_TOKEN:   ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python main.py
