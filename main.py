@@ -1,12 +1,9 @@
 """
 stock-alert / main.py
-─────────────────────
-변동 기준 (수정):
-- 오늘/어제 새 DART 공시가 있는 종목
-- 오늘/어제 새 애널리스트 리포트가 있는 종목
-
-링크 (수정):
-- 텔레그램 HTML 링크 형식 → 클릭 가능
+수정 사항:
+1. 리포트 링크 클릭 가능하게 (HTML a 태그)
+2. 목표주가 파싱 수정
+3. 신규 리포트 있으면 최근 리포트 섹션 생략
 """
 
 import os, json, time, random, requests, yfinance as yf
@@ -26,12 +23,17 @@ YESTERDAY_S      = (datetime.today() - timedelta(days=1)).strftime("%y.%m.%d")
 def send_telegram(text):
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
     for chunk in [text[i:i+4000] for i in range(0, len(text), 4000)]:
-        requests.post(url, json={"chat_id": TELEGRAM_CHAT_ID, "text": chunk,
-                                 "parse_mode": "HTML", "disable_web_page_preview": False})
+        requests.post(url, json={
+            "chat_id": TELEGRAM_CHAT_ID,
+            "text": chunk,
+            "parse_mode": "HTML",
+            "disable_web_page_preview": True
+        })
         time.sleep(0.3)
 
 
 def link(title, url):
+    """클릭 가능한 텔레그램 링크"""
     t = title.replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
     return f'<a href="{url}">{t}</a>'
 
@@ -47,8 +49,8 @@ def load_dart_corps():
     resp = requests.get(f"{DART_BASE}/corpCode.xml?crtfc_key={DART_API_KEY}", timeout=30)
     with zipfile.ZipFile(io.BytesIO(resp.content)) as z:
         xml_data = z.read(z.namelist()[0])
-    root   = ET.fromstring(xml_data)
-    corps  = {}
+    root  = ET.fromstring(xml_data)
+    corps = {}
     for item in root.findall("list"):
         name, code, sc = (item.findtext(k,"").strip() for k in ["corp_name","corp_code","stock_code"])
         if name and sc:
@@ -73,9 +75,11 @@ def check_new_disclosures(corp_code):
 
 
 def get_reports(stock_code, new_only=False):
+    """네이버금융 리포트 — 목표주가 파싱 수정"""
     url = f"https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode={stock_code}&page=1"
     try:
-        soup = BeautifulSoup(requests.get(url, headers={"User-Agent":"Mozilla/5.0"}, timeout=10).text, "html.parser")
+        resp = requests.get(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}, timeout=10)
+        soup = BeautifulSoup(resp.text, "html.parser")
         reports = []
         for row in soup.select("table.type_1 tr"):
             cols = row.find_all("td")
@@ -84,10 +88,21 @@ def get_reports(stock_code, new_only=False):
             if not ta: continue
             date = cols[4].get_text(strip=True)
             if new_only and date not in [TODAY_S, YESTERDAY_S]: continue
-            href = ta.get("href","")
-            reports.append({"date": date, "firm": cols[2].get_text(strip=True),
-                            "title": ta.get_text(strip=True), "target": cols[3].get_text(strip=True),
-                            "url": f"https://finance.naver.com{href}" if href.startswith("/") else href})
+
+            href = ta.get("href", "")
+            full_url = f"https://finance.naver.com{href}" if href.startswith("/") else href
+
+            # 목표주가: cols[3] 안의 숫자 추출
+            target_raw = cols[3].get_text(strip=True)
+            target = target_raw if target_raw and target_raw != "-" else "미제시"
+
+            reports.append({
+                "date":   date,
+                "firm":   cols[2].get_text(strip=True),
+                "title":  ta.get_text(strip=True),
+                "target": target,
+                "url":    full_url,
+            })
         return reports[:3]
     except: return []
 
@@ -99,12 +114,17 @@ def get_price(stock_code, buy_price):
             price = info.get("regularMarketPrice") or info.get("currentPrice")
             if not price: continue
             prev  = info.get("previousClose", price)
-            chg   = round((price-prev)/prev*100,2) if prev else 0
-            ret   = round((price-buy_price)/buy_price*100,2) if buy_price else None
+            chg   = round((price - prev) / prev * 100, 2) if prev else 0
+            ret   = round((price - buy_price) / buy_price * 100, 2) if buy_price else None
             cap   = info.get("marketCap")
-            return {"price": price, "change_pct": chg, "return_pct": ret,
-                    "market_cap": f"{cap/1e12:.1f}조" if cap and cap>=1e12 else (f"{cap/1e8:.0f}억" if cap else "-"),
-                    "52w_high": info.get("fiftyTwoWeekHigh"), "52w_low": info.get("fiftyTwoWeekLow")}
+            return {
+                "price":      price,
+                "change_pct": chg,
+                "return_pct": ret,
+                "market_cap": f"{cap/1e12:.1f}조" if cap and cap >= 1e12 else (f"{cap/1e8:.0f}억" if cap else "-"),
+                "52w_high":   info.get("fiftyTwoWeekHigh"),
+                "52w_low":    info.get("fiftyTwoWeekLow"),
+            }
     except: pass
     return {}
 
@@ -113,7 +133,7 @@ def get_news(name):
     try:
         soup = BeautifulSoup(requests.get(
             f"https://news.google.com/rss/search?q={requests.utils.quote(name)}+주식&hl=ko&gl=KR&ceid=KR:ko",
-            headers={"User-Agent":"Mozilla/5.0"}, timeout=10).content, "xml")
+            headers={"User-Agent": "Mozilla/5.0"}, timeout=10).content, "xml")
         return [{"title": i.find("title").text if i.find("title") else "",
                  "url":   i.find("link").text  if i.find("link")  else ""}
                 for i in soup.find_all("item")[:3]]
@@ -124,22 +144,25 @@ def get_financials(corp_code):
     lines = []
     for year in [datetime.today().year - i for i in range(1, 4)]:
         try:
-            data  = requests.get(f"{DART_BASE}/fnlttSinglAcntAll.json", params={
+            data = requests.get(f"{DART_BASE}/fnlttSinglAcntAll.json", params={
                 "crtfc_key": DART_API_KEY, "corp_code": corp_code,
                 "bsns_year": str(year), "reprt_code": "11011", "fs_div": "CFS"}, timeout=10).json()
             if data.get("status") != "000": continue
             items = data.get("list", [])
+
             def gv(aid):
                 for i in items:
                     if i.get("account_id") == aid:
                         try: return int(i.get("thstrm_amount","").replace(",",""))
                         except: return None
                 return None
+
             def fmt(v):
-                if v is None: return "-"
-                if abs(v)>=1e12: return f"{v/1e12:.1f}조"
-                if abs(v)>=1e8:  return f"{v/1e8:.0f}억"
+                if v is None:        return "-"
+                if abs(v) >= 1e12:   return f"{v/1e12:.1f}조"
+                if abs(v) >= 1e8:    return f"{v/1e8:.0f}억"
                 return str(v)
+
             rev = gv("ifrs-full_Revenue") or gv("ifrs-full_RevenueFromContractsWithCustomers")
             op  = gv("ifrs-full_ProfitLossFromOperatingActivities") or gv("dart_OperatingIncomeLoss")
             net = gv("ifrs-full_ProfitLoss")
@@ -163,31 +186,42 @@ def format_report(name, price_data, disclosures, new_reports, all_reports, news,
         "",
     ]
 
-    lines.append("<b>[신규 공시]</b>" if disclosures else "[신규 공시] 없음")
-    for d in disclosures[:3]:
-        lines.append(f"- {d['date']}  {link(d['title'], d['url'])}")
+    # 공시
+    if disclosures:
+        lines.append("<b>[신규 공시]</b>")
+        for d in disclosures[:3]:
+            lines.append(f"- {d['date']}  {link(d['title'], d['url'])}")
+    else:
+        lines.append("[신규 공시] 없음")
     lines.append("")
 
+    # 신규 리포트 (있으면 표시, 없으면 생략)
     if new_reports:
         lines.append("<b>[신규 리포트]</b>")
         for r in new_reports:
-            lines.append(f"- {r['date']}  {r['firm']}  {link(r['title'], r['url'])}  목표: {r['target']}")
+            lines.append(f"- {r['date']}  {r['firm']}  |  목표주가: {r['target']}")
+            lines.append(f"  {link(r['title'], r['url'])}")
         lines.append("")
 
+    # 재무 요약
     lines.append("<b>[재무 요약 (최근 3년)]</b>")
     lines.append(financials)
     lines.append("")
 
-    if all_reports:
+    # 최근 리포트 — 신규 리포트가 없을 때만 표시
+    if all_reports and not new_reports:
         lines.append("<b>[최근 리포트]</b>")
         for r in all_reports[:3]:
-            lines.append(f"- {r['date']}  {r['firm']}  {link(r['title'], r['url'])}  목표: {r['target']}")
+            lines.append(f"- {r['date']}  {r['firm']}  |  목표주가: {r['target']}")
+            lines.append(f"  {link(r['title'], r['url'])}")
         lines.append("")
 
+    # 뉴스
     if news:
         lines.append("<b>[최근 뉴스]</b>")
         for n in news:
-            lines.append(f"- {link(n['title'], n['url'])}")
+            if n['title'] and n['url']:
+                lines.append(f"- {link(n['title'], n['url'])}")
 
     return "\n".join(lines)
 
@@ -214,9 +248,15 @@ def main():
         price_data  = get_price(ci["stock_code"], buy_price)
         has_change  = bool(disclosures) or bool(new_reports)
 
-        entry = {"name": name, "stock_code": ci["stock_code"], "corp_code": ci["corp_code"],
-                 "buy_price": buy_price, "price_data": price_data,
-                 "disclosures": disclosures, "new_reports": new_reports}
+        entry = {
+            "name":        name,
+            "stock_code":  ci["stock_code"],
+            "corp_code":   ci["corp_code"],
+            "buy_price":   buy_price,
+            "price_data":  price_data,
+            "disclosures": disclosures,
+            "new_reports": new_reports,
+        }
         all_data.append(entry)
         if has_change:
             changed.append(entry)
@@ -232,11 +272,15 @@ def main():
     )
 
     for entry in changed + random_picks:
-        label = "변동" if entry in changed else "오늘의 종목"
-        msg   = format_report(
-            entry["name"], entry["price_data"], entry["disclosures"], entry["new_reports"],
-            get_reports(entry["stock_code"]), get_news(entry["name"]),
-            get_financials(entry["corp_code"]), label)
+        label       = "변동" if entry in changed else "오늘의 종목"
+        all_reports = get_reports(entry["stock_code"])
+        financials  = get_financials(entry["corp_code"])
+        news        = get_news(entry["name"])
+        msg = format_report(
+            entry["name"], entry["price_data"],
+            entry["disclosures"], entry["new_reports"],
+            all_reports, news, financials, label
+        )
         send_telegram(msg)
         time.sleep(1)
 
